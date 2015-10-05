@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="|  #  |"
+        android:id="@+id/number"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="|  X1  |"
+        android:id="@+id/x1"
+        android:layout_above="@+id/mas"
+        android:layout_toRightOf="@+id/number"
+        android:layout_toEndOf="@+id/number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="|  X2  |"
+        android:id="@+id/x2"
+        android:layout_above="@+id/mas"
+        android:layout_toRightOf="@+id/x1"
+        android:layout_toEndOf="@+id/x1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="|  X3  |"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/mas"
+        android:layout_toRightOf="@+id/x2"
+        android:layout_toEndOf="@+id/x2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="|  Y  |"
+        android:id="@+id/y"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="|  Xn1  |"
+        android:id="@+id/xn1"
+        android:layout_alignTop="@+id/y"
+        android:layout_toRightOf="@+id/y"
+        android:layout_toEndOf="@+id/y" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="|  Xn2  |"
+        android:id="@+id/xn2"
+        android:layout_alignBaseline="@+id/xn1"
+        android:layout_alignBottom="@+id/xn1"
+        android:layout_toRightOf="@+id/xn1"
+        android:layout_toEndOf="@+id/xn1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="|  Xn3  |"
+        android:id="@+id/xn3"
+        android:layout_above="@+id/mas"
+        android:layout_toRightOf="@+id/xn2"
+        android:layout_toEndOf="@+id/xn2" />
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mas"
+        android:layout_below="@+id/number"
+        android:numColumns="8"
+        android:horizontalSpacing="1dp"
+        android:layout_alignLeft="@+id/number"
+        android:layout_alignStart="@+id/number"
+        android:layout_alignRight="@+id/xn3"
+        android:layout_alignEnd="@+id/xn3"
+        android:layout_above="@+id/textView" />
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+
+        fab:fab_colorNormal="#fffa08"
+        fab:fab_colorPressed="#e4c200"
+
+        android:src="@drawable/renew"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/mas"
+        android:layout_alignStart="@+id/mas"
+        android:text="Result = ?" />
+
+
+</RelativeLayout>
